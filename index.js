@@ -69,11 +69,11 @@ function categoryCheck () {
     } else if (category == "horny"){
         const params = {
             // included_tags: 'hentai',
-            included_tags: 'oral',
+            // included_tags: 'oral',
             // included_tags: 'ass',
             // included_tags: 'milf',
             // included_tags: 'paizuri',
-            // included_tags: 'ecchi',
+            included_tags: 'ecchi',
             gif: true
         }
         return params;
@@ -105,7 +105,7 @@ function waifu() {
         return res.json();
     }).then((r)=>{
         console.log(r.images[0].url);
-        document.querySelector("img").setAttribute("src", r.images[0].url)
+        document.querySelector("img").setAttribute("src", r.images[0].url);
     });
 }
 
